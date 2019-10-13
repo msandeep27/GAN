@@ -2,14 +2,17 @@ GANs are made for. Generative Adversarial Networks belong to the set of generati
 
 
 What’s so magic about GANs?
+
 In short, they belong to the set of algorithms named generative models. These algorithms belong to the field of unsupervised learning, a sub-set of ML which aims to study algorithms that learn the underlying structure of the given data, without specifying a target value. Generative models learn the intrinsic distribution function of the input data p(x) (or p(x,y) if there are multiple targets/classes in the dataset), allowing them to generate both synthetic inputs x’ and outputs/targets y’, typically given some hidden parameters.
 In contrast, supervised learning algorithms learn to map a function y’=f(x), given labeled data y. An example of this would be classification, where one could use customer purchase data (x) and the customer respective age (y) to classify new customers. Most of the supervised learning algorithms are inherently discriminative, which means they learn how to model the conditional probability distribution function (p.d.f) p(y|x) instead, which is the probability of a target (age=35) given an input (purchase=milk). Despite the fact that one could make predictions with this p.d.f, one is not allowed to sample new instances (simulate customers with ages) from the input distribution directly.
 Side-note: It is possible to use discriminative algorithms which are not probabilistic, they are called discriminative functions.
 GANs they have proven to be really succesfull in modeling and generating high dimensional data, which is why they’ve become so popular. Nevertheless they are not the only types of Generative Models, others include Variational Autoencoders (VAEs) and pixelCNN/pixelRNN and real NVP. Each model has its own tradeoffs.
+
 Some of the most relevant GAN pros and cons for the are:
 They currently generate the sharpest images
 They are easy to train (since no statistical inference is required), and only back-propogation is needed to obtain gradients
 GANs are difficult to optimize due to unstable training dynamics.
+
 No statistical inference can be done with them (except here):
 GANs belong to the class of direct implicit density models; they model p(x) without explicitly defining the p.d.f.
 So.. why generative models?
